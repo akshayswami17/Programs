@@ -1,0 +1,16 @@
+public static String timeConversion(String s) {
+        
+        
+        try{
+            SimpleDateFormat inputFormat = new SimpleDateFormat("hh:mm:ssa");
+            SimpleDateFormat outFormat = new SimpleDateFormat("HH:mm:ss");
+            
+            Date date = inputFormat.parse(s);
+            return outFormat.format(date);         
+            }
+             catch(ParseException e)
+            {
+                e.printStackTrace();
+                return null;
+            }
+    }
