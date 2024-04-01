@@ -1,5 +1,5 @@
 //Converting Roman Numerals to Decimal lying between 1 to 3999
-package Numbers;
+package Numbers.Conversion;
 
 import java.util.*;
 
