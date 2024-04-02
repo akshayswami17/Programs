@@ -1,4 +1,4 @@
-package Numbers.Array;
+package Numbers.Array.LargestElementInAnArray;
 
 public class SecondLargestElementInAnArray 
 {

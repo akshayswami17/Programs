@@ -1,5 +1,5 @@
 //1. Iterative Method (Brute Force Method)
-package Numbers.Array;
+package Numbers.Array.LargestElementInAnArray;
 
 public class LargestElementInAnArray 
 {
