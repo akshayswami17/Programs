@@ -1,8 +1,8 @@
 package DSA;
 
+import java.util.LinkedList;
 
-
-class LinkedList {
+class ReverseLinkedList {
 
     static Node head;
 
@@ -44,7 +44,7 @@ class LinkedList {
 
     public static void main(String[] args)
     {
-        LinkedList list = new LinkedList();
+        ReverseLinkedList list = new ReverseLinkedList();
         list.head = new Node(50);
         list.head.next = new Node(49);
         list.head.next.next = new Node(48);
@@ -57,6 +57,9 @@ class LinkedList {
         System.out.println("Reversed linked list ");
         list.printList(head);
     }
+
+
+    
 }
 
 
