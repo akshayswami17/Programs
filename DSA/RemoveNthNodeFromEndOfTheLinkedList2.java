@@ -2,7 +2,7 @@ package DSA;
 
 
 
-public class RemoveNthNodeFromEndOfTheLinkedList 
+public class RemoveNthNodeFromEndOfTheLinkedList2 
 {
     static class Node
     {
@@ -31,40 +31,25 @@ public class RemoveNthNodeFromEndOfTheLinkedList
 
     public static Node removeNthNodeFromEnd(Node head , int B)
     {
-        int length = 0;
-        Node move = head ;
-        while(move!=null)
+        Node start = new Node();
+        start.next=head;
+        Node fastPtr = start;
+        Node slowPtr = start;
+        for(int i = 0 ; i< B ;i++)
         {
-            length++;
-            move = move.next;
+            fastPtr = fastPtr.next;
         }
-
-        if(B > length)
+        while(fastPtr.next != null)
         {
-            System.out.print("Length of the linked list is " + length);
-            System.out.print(" we can't remove "+ B + 
-                             "th node from the");
-            System.out.print(" linked list\n");
-            return head;
-        }
-        else if(B == length){ return head.next;}
-        else
-        {
-            int diff = length - B;
-            Node prev = null;
-            Node current = head;
-            for(int i = 0 ;i<diff;i++)
-            {
-                prev=current;
-                current=current.next;
-
-            }
-            prev.next=current.next;
-            return head;
-
+            fastPtr = fastPtr.next;
+            slowPtr = slowPtr.next;
 
         }
+        slowPtr.next=slowPtr.next.next;
+        return start.next;
 
+
+       
     }
     static void display(Node head)
 {
@@ -86,7 +71,7 @@ public static void main(String[] args)
     head = createNode(head, 4);
     head = createNode(head, 5);
      
-    int n = 1;
+    int n = 2;
     
      
     System.out.print("Linked list before modification: \n");
