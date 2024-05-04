@@ -1,5 +1,5 @@
-package DSA;
-//ToGetNthNodeInALinkedList
+
+
 
 
 
@@ -20,10 +20,10 @@ package DSA;
 }
 
 
-public class ToGetNthNodeInALinkedList
+public class NumberOfTimesAGivenIntOccursInALinkedList
 {
 
-    Node head = null;
+    static Node head = null;
     public void insertNode(int val)
     { 
         Node newNode = new Node(val);
@@ -49,42 +49,47 @@ public class ToGetNthNodeInALinkedList
         System.out.println("null");
     }
 
-    public int GetNthElement(int index)
+    public static int numberOfTimesAGivenIntOccursInALinkedList(int no)
     {
-        Node move = head;
         int count = 0 ;
-        while(move != null)
+        Node move = head;
+        if(head.data==no){ count++;}
+       while(move.next!= null)
+       {
+        move=move.next;
+        if(move.data == no )
         {
-            if(count == index)
-            {
-                return move.data;
-            }
             count++;
-            move = move.next;
         }
+        
+       }
+        
 
-        return index;
+        
+        return count;
+        
     }
     public static void main(String[] args) 
     {
-        ToGetNthNodeInALinkedList list = new ToGetNthNodeInALinkedList();
+        NumberOfTimesAGivenIntOccursInALinkedList list = new NumberOfTimesAGivenIntOccursInALinkedList();
 
         // Insert nodes into the linked list
-        list.insertNode(1);
-        list.insertNode(2);
+        list.insertNode(7);
+        list.insertNode(8);
         list.insertNode(3);
-        list.insertNode(4);
-        list.insertNode(5);
+        list.insertNode(31);
+        list.insertNode(1);
 
         System.out.println("Original Linked List:");
         list.printList();
 
        
-        int position = 2;
-        System.out.println(list.GetNthElement(position));
+        int noToCheckCount = 1;
+        System.out.println(list.numberOfTimesAGivenIntOccursInALinkedList(noToCheckCount));
         
 
        
         
     }
 }
+

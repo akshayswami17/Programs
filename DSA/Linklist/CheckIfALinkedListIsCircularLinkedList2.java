@@ -1,5 +1,4 @@
-package DSA;
-//CheckIfALinkedListIsCircularLinkedList2
+
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package DSA;
+
 //Implementation of Floyd’s Cycle-Finding Algorithm.
 public class DetectLoopInALinkedListUsing 
 {

@@ -1,4 +1,4 @@
-package DSA;
+
 //MergeTwoSortedLinkedLists
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,6 +1,3 @@
-package DSA;
-//NumberOfTimesAGivenIntOccursInALinkedList
-
 
 
 
@@ -21,10 +18,10 @@ package DSA;
 }
 
 
-public class NumberOfTimesAGivenIntOccursInALinkedList
+public class DeleteALinkedListNodeAtAGivenPosition
 {
 
-    static Node head = null;
+    Node head = null;
     public void insertNode(int val)
     { 
         Node newNode = new Node(val);
@@ -50,47 +47,49 @@ public class NumberOfTimesAGivenIntOccursInALinkedList
         System.out.println("null");
     }
 
-    public static int numberOfTimesAGivenIntOccursInALinkedList(int no)
+    public void deleteNode(int position)
     {
-        int count = 0 ;
-        Node move = head;
-        if(head.data==no){ count++;}
-       while(move.next!= null)
-       {
-        move=move.next;
-        if(move.data == no )
+        if(head == null)
         {
-            count++;
+            return;
         }
-        
-       }
-        
+        Node move = head;
+        if(position == 0)
+        {
+            head = head.next;
+            return;
+        }
+        for(int i = 0 ; move!=null && i<position-1 ; i++)
+        {
+            move = move.next;
+        }
+        if(move==null && move.next==null)
+        {
+            return;
+        }
+        move.next=move.next.next;
 
-        
-        return count;
-        
     }
     public static void main(String[] args) 
     {
-        NumberOfTimesAGivenIntOccursInALinkedList list = new NumberOfTimesAGivenIntOccursInALinkedList();
+        DeleteALinkedListNodeAtAGivenPosition list = new DeleteALinkedListNodeAtAGivenPosition();
 
         // Insert nodes into the linked list
-        list.insertNode(7);
-        list.insertNode(8);
-        list.insertNode(3);
-        list.insertNode(31);
         list.insertNode(1);
+        list.insertNode(2);
+        list.insertNode(3);
+        list.insertNode(4);
+        list.insertNode(5);
 
         System.out.println("Original Linked List:");
         list.printList();
 
-       
-        int noToCheckCount = 1;
-        System.out.println(list.numberOfTimesAGivenIntOccursInALinkedList(noToCheckCount));
-        
+        // Delete node at position 2 (value 3)
+        int positionToDelete = 2;
+        list.deleteNode(positionToDelete);
 
-       
+        System.out.println("Linked List after deletion at position " + positionToDelete + ":");
+        list.printList();
         
     }
 }
-

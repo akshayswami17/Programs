@@ -1,4 +1,5 @@
-package DSA;
+
+
 
 
 
@@ -18,7 +19,7 @@ package DSA;
 }
 
 
-public class DeleteALinkedListNodeAtAGivenPosition
+public class ToGetNthNodeInALinkedList
 {
 
     Node head = null;
@@ -47,32 +48,25 @@ public class DeleteALinkedListNodeAtAGivenPosition
         System.out.println("null");
     }
 
-    public void deleteNode(int position)
+    public int GetNthElement(int index)
     {
-        if(head == null)
-        {
-            return;
-        }
         Node move = head;
-        if(position == 0)
+        int count = 0 ;
+        while(move != null)
         {
-            head = head.next;
-            return;
-        }
-        for(int i = 0 ; move!=null && i<position-1 ; i++)
-        {
+            if(count == index)
+            {
+                return move.data;
+            }
+            count++;
             move = move.next;
         }
-        if(move==null && move.next==null)
-        {
-            return;
-        }
-        move.next=move.next.next;
 
+        return index;
     }
     public static void main(String[] args) 
     {
-        DeleteALinkedListNodeAtAGivenPosition list = new DeleteALinkedListNodeAtAGivenPosition();
+        ToGetNthNodeInALinkedList list = new ToGetNthNodeInALinkedList();
 
         // Insert nodes into the linked list
         list.insertNode(1);
@@ -84,12 +78,12 @@ public class DeleteALinkedListNodeAtAGivenPosition
         System.out.println("Original Linked List:");
         list.printList();
 
-        // Delete node at position 2 (value 3)
-        int positionToDelete = 2;
-        list.deleteNode(positionToDelete);
+       
+        int position = 2;
+        System.out.println(list.GetNthElement(position));
+        
 
-        System.out.println("Linked List after deletion at position " + positionToDelete + ":");
-        list.printList();
+       
         
     }
 }
