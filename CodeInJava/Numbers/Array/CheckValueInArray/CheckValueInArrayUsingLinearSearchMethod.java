@@ -1,4 +1,4 @@
-package Numbers.Array.CheckValueInArray;
+package Array.CheckValueInArray;
 
 public class CheckValueInArrayUsingLinearSearchMethod 
 {

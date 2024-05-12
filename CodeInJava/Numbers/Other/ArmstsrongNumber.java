@@ -1,3 +1,4 @@
+package Other;
 public class ArmstsrongNumber
 {
     public static boolean isArmstsrongNumber(int number)

@@ -1,5 +1,5 @@
 // arrayReverse by swping elements.
-package Numbers.Array.ArrayReverse;
+package Array.ArrayReverse;
 
 public class ArrayReverseUsingALoop 
 {

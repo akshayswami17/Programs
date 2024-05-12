@@ -1,4 +1,4 @@
-package Numbers.Array.ArrayReverse;
+package Array.ArrayReverse;
 
 public class ArrayReverseRecursion 
 {

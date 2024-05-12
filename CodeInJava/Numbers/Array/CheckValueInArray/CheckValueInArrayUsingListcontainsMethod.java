@@ -1,4 +1,4 @@
-package Numbers.Array.CheckValueInArray;
+package Array.CheckValueInArray;
 //CheckValueInArrayUsingList.containsMethod
 import java.lang.reflect.Array;
 import java.util.Arrays;

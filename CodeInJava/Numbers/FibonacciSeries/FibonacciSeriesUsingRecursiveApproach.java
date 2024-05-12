@@ -1,4 +1,4 @@
-package Numbers.FibonacciSeries;
+package FibonacciSeries;
 
 public class FibonacciSeriesUsingRecursiveApproach 
 {

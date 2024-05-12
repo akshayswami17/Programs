@@ -1,4 +1,4 @@
-package Numbers.Conversion;
+package Conversion;
 
 public class NumberToRoman 
 {
